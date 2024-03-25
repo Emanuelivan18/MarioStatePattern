@@ -27,7 +27,7 @@ namespace MarioStatePattern
 
         public void Run()
         {
-            Console.WriteLine("Mario stats running.");
+            Console.WriteLine("Mario starts running.");
             mario.ChangeState(new MarioRunState(mario));
         }
 
