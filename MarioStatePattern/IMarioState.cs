@@ -8,6 +8,9 @@ namespace MarioStatePattern
 {
     public interface IMarioState
     {
-        void Enter();
+        void Walk();
+        void Idle();
+        void Run();
+        void Jump();
     }
 }

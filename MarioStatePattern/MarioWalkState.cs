@@ -15,9 +15,26 @@ namespace MarioStatePattern
             this.mario = mario;
         }
 
-        public void Enter()
+        public void Idle()
         {
-            Console.WriteLine("Mario is now walking.");
+            Console.WriteLine("Mario stops walking.");
+            mario.ChangeState(new MarioIdleState(mario));
+        }
+
+        public void Jump()
+        {
+            Console.WriteLine("Mario can't jump while walking.");
+        }
+
+        public void Run()
+        {
+            Console.WriteLine("Mario is now running.");
+            mario.ChangeState(new MarioRunState(mario));
+        }
+
+        public void Walk()
+        {
+            Console.WriteLine("Mario is already walking.");
         }
     }
 }

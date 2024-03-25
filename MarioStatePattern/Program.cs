@@ -8,7 +8,7 @@
 
             mario.Idle(); // Invalid
 
-            mario.Jump();
+            mario.Jump(); // Invalid
             mario.Jump(); // Invalid
 
             mario.Walk();
@@ -16,6 +16,8 @@
 
             mario.Walk();
             mario.Idle();
+            mario.Run(); // Invalid
+            mario.Jump(); // Invalid
 
             mario.Walk();
         }
