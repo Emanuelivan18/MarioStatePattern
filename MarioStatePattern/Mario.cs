@@ -15,7 +15,27 @@ namespace MarioStatePattern
             currentState = new MarioIdleState(this);
         }
 
-        public void ChangeState(IMarioState newState)
+        public void Walk()
+        {
+            ChangeState(new MarioWalkState(this));
+        }
+
+        public void Run()
+        {
+            ChangeState(new MarioRunState(this));
+        }
+
+        public void Jump()
+        {
+            ChangeState(new MarioJumpState(this));
+        }
+
+        public void Idle()
+        {
+            ChangeState(new MarioIdleState(this));
+        }
+
+        private void ChangeState(IMarioState newState)
         {
             if (currentState.GetType() != newState.GetType())
             {

@@ -6,18 +6,18 @@
         {
             Mario mario = new();
 
-            mario.ChangeState(new MarioIdleState(mario)); // Invalid
+            mario.Idle(); // Invalid
 
-            mario.ChangeState(new MarioJumpState(mario));
-            mario.ChangeState(new MarioJumpState(mario)); // Invalid
+            mario.Jump();
+            mario.Jump(); // Invalid
 
-            mario.ChangeState(new MarioWalkState(mario));
-            mario.ChangeState(new MarioRunState(mario));
+            mario.Walk();
+            mario.Run();
 
-            mario.ChangeState(new MarioWalkState(mario));
-            mario.ChangeState(new MarioIdleState(mario));
+            mario.Walk();
+            mario.Idle();
 
-            mario.ChangeState(new MarioWalkState(mario));
+            mario.Walk();
         }
     }
 }
